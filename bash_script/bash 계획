@@ -1,0 +1,50 @@
+0.
+bash script 파일과 영상(road.mp4)을 놓고 bash를 실행한다.
+
+1.
+~/Desktop/self-driving-car-master/project_4_advanced_lane_finding 에 project_video.mp4 라는 이름으로 mp4 파일을 넣는다.
+
+------------------------------------------------------------------------------------------------------
+cp road.mp4 ~/Desktop/self-driving-car-master/project_4_advanced_lane_finding/project_video.mp4
+------------------------------------------------------------------------------------------------------
+
+2.
+~/Desktop/self-driving-car-master/project_4_advanced_lane_finding/main.py 실행
+
+현재 위치 변수에 저장하고 이동하고 실행한 후 다시 돌아온다.
+------------------------------------------------------------------------------------------------------
+TMP_PATH=$(pwd)
+cd ~/Desktop/self-driving-car-master/project_4_advanced_lane_finding
+python3 ~/Desktop/self-driving-car-master/project_4_advanced_lane_finding/main.py
+cd $TMP_PATH
+------------------------------------------------------------------------------------------------------
+
+
+
+3.
+
+~/Desktop/self-driving-car-master/project_4_advanced_lane_finding/out_project_10.mp4
+
+를  ~/Documents/YoloX/YOLOX/asset/project_video.mp4 로 이동 
+------------------------------------------------------------------------------------------------------
+mv ~/Desktop/self-driving-car-master/project_4_advanced_lane_finding/out_project_10.mp4 ~/Documents/YoloX/YOLOX/assets/video.mp4
+------------------------------------------------------------------------------------------------------
+
+
+5.
+------------------------------------------------------------------------------------------------------
+TMP_PATH=$(pwd)
+cd ~/Documents/YoloX/YOLOX
+sudo python3 tools/demo.py video -n yolox-s -c yolox_s.pth --path assets/video.mp4 --conf 0.25 --nms 0.45 --tsize 640 --save_result --device gpu
+cd $TMP_PATH
+------------------------------------------------------------------------------------------------------
+
+실행
+
+6.
+~/Documents/YoloX/YOLOX_outputs/yolox_s/vis_res/YOLOX_outputs/yolox_s/vis_res/output/video.mp4 를
+현재 위치로 옮김
+------------------------------------------------------------------------------------------------------
+sudo mv ~/Documents/YoloX/YOLOX/YOLOX_outputs/yolox_s/vis_res/out/video.mp4 .
+------------------------------------------------------------------------------------------------------
+

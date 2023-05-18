@@ -1,0 +1,6 @@
+road.mp4 이름으로 된 영상이 있는 폴더에 bash.sh 를 놓고
+
+sudo sh bash.sh
+다
+
+차선인식 & 차량인식을 거친 video.mp4 파일이 생성됩니
